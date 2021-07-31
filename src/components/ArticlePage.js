@@ -7,7 +7,7 @@ function ArticlePage() {
   const { id } = useParams();
   const [isLoaded, setIsLoaded] = useState(false);
   const [post, setPost] = useState(null);
-
+  const pageTitle = post ? `Underreacted | ${post.title}` : "Underreacted";
   const url = `http://localhost:4000/posts/${id}`;
   useEffect(() => {
     setIsLoaded(false);
